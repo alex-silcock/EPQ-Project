@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  
+</head>
+
+<body>
+  
+<ons-page id=”quiz.html”>
+<!-- creating a check answer script to check the answer of the quiz -->
+  <script>
+  function chk_ans()
+{
+	my_elem = document.getElementById("ans");
+	my_elem.innerHTML = "print(a + b)";
+	my_elem.style.color = "red";
+}
+  </script>
+<div id = "quiz">
+<h3>Quiz</h3>
+
+<p><span class = "myquote" id = ans></span></p>
+<!-- creating a button to click to use the chk_ans() script -->
+<p> <Button onClick = "chk_ans()">Check Answer</button></p>
+</div>
+
+<ons-toolbar id="home-toolbar">
+<div class="left"> <ons-back-button></ons-back-button> </div>
+</ons-toolbar>
+
+
+
+</ons-page>
+</body>
+</html>
