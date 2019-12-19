@@ -1,28 +1,32 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-  
-</head>
+  </head>
 
 <body>
   
-<ons-page id=”quiz.html”>
+<ons-page id=python.html”>
 <!-- creating a check answer script to check the answer of the quiz -->
-  <script>
+<script>
   function chk_ans()
 {
-	my_elem = document.getElementById("ans");
-	my_elem.innerHTML = "print(a + b)";
-	my_elem.style.color = "red";
+	var answer = document.getElementById("ans").value;
+  if (answer == "print(a+b)"){
+    ons.notification.alert("correct")
+  }
+  else {
+    ons.notification.alert("incorrect")
+  }
 }
-  </script>
-<div id = "quiz">
-<h3>Quiz</h3>
+function loadPage(page)
+ {
+  document.getElementById('menu').close();
+  document.getElementById('navigator').bringPageTop(page, {
+    animation: 'fade' });
+ }
+</script>
 
-<p><span class = "myquote" id = ans></span></p>
-<!-- creating a button to click to use the chk_ans() script -->
-<p> <Button onClick = "chk_ans()">Check Answer</button></p>
-</div>
+<button class="button" onClick = "loadPage('pythonQuiz.html')"> Take quiz </button>
 
 <ons-toolbar id="home-toolbar">
 <div class="left"> <ons-back-button></ons-back-button> </div>
