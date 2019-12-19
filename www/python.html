@@ -1,23 +1,34 @@
-<!DOCTYPE HTML>
-<html>
-  <head>
-  </head>
-
-<body>
-  
 <ons-page id=python.html”>
-<!-- creating a check answer script to check the answer of the quiz -->
-<script>
-  function chk_ans()
-{
-	var answer = document.getElementById("ans").value;
-  if (answer == "print(a+b)"){
-    ons.notification.alert("correct")
-  }
-  else {
-    ons.notification.alert("incorrect")
-  }
+<html>
+<body>
+<style>
+  @import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
+button{
+  font-family: 'Work Sans', sans-serif;
+    font-size: 22px;
+    background-color: #279;
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
 }
+</style>
+
+  
+<!-- load page function to push the new page to the top of the screen -->
+<script>
+//  function chk_ans()
+//{
+//	var answer = document.getElementById("ans").value;
+//  if (answer == "print(a+b)"){
+//    ons.notification.alert("correct")
+//  }
+//  else {
+//   ons.notification.alert("incorrect")
+//  }
+//}
 function loadPage(page)
  {
   document.getElementById('menu').close();
@@ -26,14 +37,13 @@ function loadPage(page)
  }
 </script>
 
-<button class="button" onClick = "loadPage('pythonQuiz.html')"> Take quiz </button>
+<button id="loadquizbtn" onClick = "loadPage('pythonQuiz.html')"> Take quiz </button>
 
 <ons-toolbar id="home-toolbar">
 <div class="left"> <ons-back-button></ons-back-button> </div>
 </ons-toolbar>
 
 
-
-</ons-page>
 </body>
 </html>
+</ons-page>
