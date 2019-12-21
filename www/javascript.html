@@ -1,32 +1,35 @@
-<!DOCTYPE HTML>
-<ons-page id="javascript.html”>
+<ons-page id="javascript.html">
 <html>
-  <head>
-
-</head>
-
 <body>
+<style>
+  @import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
+button{
+  font-family: 'Work Sans', sans-serif;
+    font-size: 22px;
+    background-color: #279;
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin: 15px;
+}
+</style>
 
+<script>
 
-  <script>
-  </script>
+</script>
 
-  <h1>
-    My Locations
-  </h1>
-  <h3> 
-    There are currently no locations
-  </h3>
 
 <ons-toolbar id="home-toolbar">
 <div class="left"> <ons-back-button></ons-back-button> </div>
 </ons-toolbar>
 
-<ons-tabbar id="tabbar">
-<ons-tab page="mylocations.html" label="My Locations"></ons-tab>
-<ons-tab page="addlocations.html" label="Add New Location"></ons-tab>
-</ons-tabbar>
 
-</ons-page>
+<button id="learnjsbtn" onClick = "loadPage('learnJavascript.html')"> Learn javascript </button>
+<button id="loadjsquizbtn" onClick = "loadPage('javascriptQuiz.html')"> Take quiz </button>
+
 </body>
 </html>
+</ons-page>

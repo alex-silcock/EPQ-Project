@@ -1,0 +1,62 @@
+<ons-page id="userProfile.html">
+<html>
+<body>
+<style>
+
+</style>
+
+<script>
+var app = {};
+
+ons.ready(function () {
+  ons.createElement('action-sheet.html', { append: true })
+    .then(function (sheet) {
+      app.showFromTemplate = sheet.show.bind(sheet);
+      app.hideFromTemplate = sheet.hide.bind(sheet);
+    });
+});
+
+//app.showFromObject = function () {
+//  ons.openActionSheet({
+//    cancelable: true,
+//   buttons: [
+//      'Share with friends',
+//      'Edit profile',
+//      {
+//        label: 'Settings',
+//        //modifier: 'destructive'
+//      },
+//      {
+//        label: 'Cancel',
+//        icon: 'md-close'
+//      }
+//    ]
+//  })
+//};
+</script>
+
+
+
+
+<template id="action-sheet.html">
+  <ons-action-sheet id="sheet">
+    <ons-action-sheet-button icon="md-square-o" onclick="app.hideFromTemplate()">Share with friends</ons-action-sheet-button>
+    <ons-action-sheet-button icon="md-square-o" onclick="app.hideFromTemplate()">Edit Profile</ons-action-sheet-button>
+    <ons-action-sheet-button icon="md-square-o" onclick="app.hideFromTemplate()">Settings</ons-action-sheet-button>
+    <ons-action-sheet-button icon="md-close" onclick="app.hideFromTemplate()">Cancel</ons-action-sheet-button>
+  </ons-action-sheet>
+</template>
+
+
+<ons-toolbar id="home-toolbar">
+<div class="left"> <ons-back-button></ons-back-button> 
+<span class="toolbar-button toolbar-button--material">
+  <i id="settings" onClick="app.showFromTemplate()"class="zmdi zmdi-more-vert"></i>
+</span>
+</div>
+</ons-toolbar>
+
+
+</body>
+</html>
+</ons-page>
