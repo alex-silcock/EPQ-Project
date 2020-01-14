@@ -26,13 +26,37 @@ function loadPage(page)
  }
 </script>
 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCW4kCNQpYWdG82X-nFftivFdyYKogNlXk",
+    authDomain: "epqproject-c1b06.firebaseapp.com",
+    databaseURL: "https://epqproject-c1b06.firebaseio.com",
+    projectId: "epqproject-c1b06",
+    storageBucket: "epqproject-c1b06.appspot.com",
+    messagingSenderId: "712499499211",
+    appId: "1:712499499211:web:a094a8bedc31cc8c980b4e"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
 </head>
 
 <body>
+
 <ons-splitter> <!-- The side menu -->
   <ons-splitter-side id="menu" collapse width="220px">
     <ons-page>
-      <ons-list>
+      <ons-list id="my_list">
         <ons-list-item onclick="loadPage('userProfile.html')"> Profile </ons-list-item>
         <ons-list-item onclick="loadPage('python.html')"> Python </ons-list-item>
         <ons-list-item onclick="loadPage('javascript.html')"> Javascript </ons-list-item>
@@ -42,7 +66,7 @@ function loadPage(page)
   </ons-splitter-side> <!-- Everything not in the side menu -->
 
   <ons-splitter-content>
-    <ons-navigator id="navigator" page="welcome.html">
+    <ons-navigator id="navigator" page="login.html">
     </ons-navigator>
   </ons-splitter-content>
 </ons-splitter>
