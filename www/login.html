@@ -45,6 +45,11 @@ function login()
  }
  })
  };
+
+ function signUp (){
+  var navigator = document.getElementById('navigator');
+  navigator.resetToPage('signUp.html');
+ }
 </script>
 
  <div style="text-align: center; margin-top: 200px">
@@ -58,6 +63,9 @@ function login()
  </p>
  <p>
  <ons-button onClick='login()'>Sign in</ons-button>
+ <p>
+ <ons-button onClick='signUp()'>Sign up</ons-button>
+ </p>
  </p>
  </div>
  
