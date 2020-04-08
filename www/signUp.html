@@ -4,30 +4,34 @@
 <head>
 
     <script>
-        function createAccount() {
+        function createAccount()
+        {
           user_userid = document.getElementById('userField').value
           user_name = document.getElementById('nameField').value
           user_pass = document.getElementById('passField').value
-          firebase.database().ref('users/' + user_userid).set({name:user_name, pass_user_pass});
+          firebase.database().ref('users/' + user_userid).set({name:user_name, pass:user_pass});
 
           var ref = firebase.database().ref("users")
           ref.child(user_userid).once('value', function(snapshot))
 
           // seeing if the user already exists 
-          
           var exists = (snapshot.val() !== null)
           if (exists){
             ons.notification.alert("User exists")
           }
+          if (user_name == ""){
+            alert("Empty");
+          }
         }
-
     </script>
 </head>
 
 <body>
-  
+<ons-toolbar id="home-toolbar">
+<div class="left"> <ons-back-button></ons-back-button> </div>
+</ons-toolbar>
 
- <h2>Add User</h2>
+ <h2>Sign up</h2>
  <p>UserID: <input type="text" placeholder="UserID" id="userField"></p>
  <p>Name: <input type="text" placeholder="Name" id="nameField"></p>
  <p>Password: <input type="text" placeholder="Password" id="passField"></p>

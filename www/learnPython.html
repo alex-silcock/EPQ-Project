@@ -2,10 +2,16 @@
 <ons-page id="learnPython.html">
 <html>
 <head>
+<link rel="stylesheet" href="css/styles.css">
+<input type="search" value="" id="inp_search" placeholder="Search" class="search-input" style="width: 100%;" onkeyup="search()">
 
 </head>
 <body>
+  <button id="chapter1" onClick="loadPage('ch1python.html')">Chapter 1: What is Python? </button>
+  <button id="chapter2" onClick="loadPage('ch2python.html')">Chapter 2: Learning the basics of Python </button>
+  <button id="chapter3" onClick="loadPage('ch3python.html')">Chapter 3: </button>
 </body>
+
 <ons-toolbar id="home-toolbar">
 <div class="left"> <ons-back-button></ons-back-button> </div>
 </ons-toolbar>

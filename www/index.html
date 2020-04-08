@@ -24,6 +24,10 @@ function loadPage(page)
   document.getElementById('navigator').bringPageTop(page, {
     animation: 'fade' });
  }
+
+function openMenu(){
+  document.getElementById('menu').open();
+}
 </script>
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -68,7 +72,8 @@ function loadPage(page)
   </ons-splitter-side> <!-- Everything not in the side menu -->
 
   <ons-splitter-content>
-    <ons-navigator id="navigator" page="login.html">
+    <ons-navigator id="navigator" page="welcome.html">
+    <!-- <ons-navigator id="navigator" page="/public/loginNew.html"> -->
     </ons-navigator>
   </ons-splitter-content>
 </ons-splitter>
